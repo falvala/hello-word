@@ -62,8 +62,9 @@ clear all
 pseudoal= [3:7]; election= randperm (4);
 time= pseudoal (election (1))
 clear pseudoal election
-pseudoal= [0.2 : 0.1 : 0.5]; election= randperm (4);
-timefix= pseudoal (election (1))
+timefix= 0.2 + (0.5-0.2).*rand %% elige un numero aleatorio entre 0.2 y 0.5
+  %pseudoal= [0.2 : 0.1 : 0.5]; election= randperm (4);
+  %timefix= pseudoal (election (1))
 clear pseudoal election
 
 %presenta la pantalla
@@ -101,8 +102,9 @@ Screen ('CloseAll')
 %% PROBLEMA #6.
 
 time=2
-pseudoal= [0.2 : 0.1 : 0.5]; election= randperm (4);
-timefix= pseudoal (election (1))
+timefix= 0.2 + (0.5-0.2).*rand %% elige un numero aleatorio entre 0.2 y 0.5
+  %pseudoal= [0.2 : 0.1 : 0.5]; election= randperm (4);
+  %timefix= pseudoal (election (1))
 clear pseudoal election
 
 %presenta la pantalla
