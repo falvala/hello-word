@@ -334,19 +334,20 @@ for i= 1:n
         end
     Screen('Flip', wPtr); %WaitSecs(timedot);
     
-     FlushEvents;
-   if tipo_trial(1,i)== tipo_trial (2,i);
+
+   if tipo_trial(1,i)== tipo_trial (2,i)
         while KeyCode (right_key)==0
         [KeyIsDown, endrt, KeyCode]=KbCheck;
         WaitSecs(0.1);
         end
-   elseif tipo_trial(1,i)~= tipo_trial (2,i);
+   elseif tipo_trial(1,i)~= tipo_trial (2,i)
         while KeyCode (left_key)==0
         [KeyIsDown, endrt, KeyCode]=KbCheck;
         WaitSecs(0.1);
         end
-        FlushEvents; 
+        
    end
+   KeyCode (right_key)=0; KeyCode (left_key)=0;
     
     elseif tipo_trial (1,i) == 2
     Screen ('FillRect', wPtr, [250 0 0], right_screen);
@@ -359,18 +360,19 @@ for i= 1:n
     Screen('Flip', wPtr); %WaitSecs(timedot);
     
      FlushEvents;
-   if tipo_trial(1,i)== tipo_trial (2,i);
+   if tipo_trial(1,i)== tipo_trial (2,i)
         while KeyCode (right_key)==0
         [KeyIsDown, endrt, KeyCode]=KbCheck;
         WaitSecs(0.1);
         end
-   elseif tipo_trial(1,i)~= tipo_trial (2,i);
+   elseif tipo_trial(1,i)~= tipo_trial (2,i)
         while KeyCode (left_key)==0
         [KeyIsDown, endrt, KeyCode]=KbCheck;
         WaitSecs(0.1);
         end
-        FlushEvents;
+        
    end
+   KeyCode (right_key)=0; KeyCode (left_key)=0;
     
    
     end
@@ -381,3 +383,4 @@ for i= 1:n
     
 end
 Screen ('CloseAll')
+
